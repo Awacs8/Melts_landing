@@ -1,0 +1,154 @@
+:root {
+  --black: rgb(33, 57, 57);
+  --white: rgb(245, 245, 245);
+  --pink: rgb(250, 235, 215);
+  --green: rgb(155, 227, 77);
+  --darkGreen: rgb(46, 130, 57);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--pink);
+  font-family: sans-serif;
+  color: var(--black);
+  width: 100%;
+  font-size: 16px;
+}
+
+/*** CONTAINERS ***/
+
+.lander {
+  display: flex;
+  gap: 5%;
+  align-items: center;
+  height: 90%;
+  padding: 0 5%;
+}
+article {
+  flex: 45%;
+}
+.video {
+  border: solid 30px var(--black);
+  border-radius: 3%;
+  transition: 1s;
+}
+.video:hover {
+  border: solid 25px var(--black);
+}
+
+/*** NAVBAR ***/
+
+nav {
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.nav-item {
+  padding: 15px 20px;
+  border-radius: 8%;
+}
+nav span {
+  visibility: hidden;
+}
+
+/*** LINKS AND BUTTONS ***/
+
+a {
+  text-decoration: none;
+  color: var(--black);
+  transition: 1s;
+}
+.btn-container {
+  text-align: center;
+}
+button {
+  background-color: var(--green);
+  color: var(--black);
+  border: 0;
+  border-radius: 5px;
+  margin: 10% 5%;
+  padding: 0 20px;
+  height: 45px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: 1s;
+  vertical-align: top;
+}
+button:hover,
+.nav-item:hover {
+  cursor: pointer;
+  background-color: var(--darkGreen);
+  color: var(--white);
+}
+button span {
+  vertical-align: middle;
+}
+
+/*** LISTS AND PARAGRAPHS ***/
+
+h1 {
+  font-size: 2.4rem;
+}
+h2 {
+  font-size: 1.7rem;
+}
+h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+p {
+  text-align: justify;
+  text-indent: 3%;
+}
+ul {
+  margin-left: 3%;
+}
+
+@media (max-width: 960px) {
+  button {
+    margin: 5% auto;
+    height: 40px;
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+}
+@media (max-width: 768px) {
+  a {
+    transition: none;
+  }
+  nav {
+    flex-direction: column;
+  }
+  .nav-item {
+    border-radius: 0;
+  }
+  .nav-items {
+    visibility: hidden;
+    width: 90%;
+  }
+  .nav-items-show {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+  }
+  header span {
+    visibility: visible;
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+  .lander {
+    flex-direction: column-reverse;
+  }
+  .video {
+    border-width: 20px;
+  }
+  article {
+    margin: 3% 0;
+  }
+}
